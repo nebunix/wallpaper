@@ -35,6 +35,7 @@ in
 
               Service = {
                 Type = "simple";
+                ExecStartPre = "/run/current-system/sw/bin/sleep 5"; # hack for graphical-session.target being reached to early with ly
                 ExecStart = "${pkgs.swww}/bin/swww-daemon";
                 ExecStartPost = "${pkgs.swww}/bin/swww restore";
               };
