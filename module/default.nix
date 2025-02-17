@@ -36,6 +36,7 @@ in
               Service = {
                 Type = "simple";
                 ExecStart = "${pkgs.swww}/bin/swww-daemon";
+                ExecStartPost = "${pkgs.swww}/bin/swww restore";
               };
 
               Install = {
